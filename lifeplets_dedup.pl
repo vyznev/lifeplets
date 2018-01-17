@@ -9,7 +9,7 @@ while (<>) {
     s/\n+$//;                                      # remove trailing linefeed for symmetry
     my $n = tr/#*/##/;                             # count number of live cells (and normalize symbol)
     my @pat = transpose($_);                       # transpose tall and narrow patterns
-    push @pat, map reverse, @pat;                  # add 180 mirrored versions of pattern(s) to @pat
+    push @pat, map scalar reverse, @pat;           # add 180 mirrored versions of pattern(s) to @pat
     push @pat, map s/(\S+)/reverse $1/egr, @pat;   # add horizontally mirrored versions to @pat
     @pat = sort @pat;                              # sort lexicographically to find canonical mirror version
     $sizes[$n]{$pat[0]}++;                         # add canonical version to collection for later printing
