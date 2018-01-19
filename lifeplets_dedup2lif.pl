@@ -4,7 +4,7 @@ use warnings;
 use feature qw(say);
 
 # output parameters:
-my $gridwidth = 120;  # arrange patterns in a grid at most this many cells wide
+my $gridwidth = 160;  # arrange patterns in a grid at most this many cells wide
 my $padding   = 2;    # leave at least this many empty rows/columns between patterns
 my $groupgap  = 4;    # extra empty rows between different size groups
 
